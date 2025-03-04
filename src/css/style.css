@@ -95,6 +95,11 @@ main {
         font-weight: 500;
     }
     
+    & ul {
+        padding: 0 1em 1em 1em;
+        list-style: outside;
+    }
+
     & li {
         font-weight: 500;
     }
@@ -113,31 +118,33 @@ main {
     display: flex;
     width: 100%;
     padding: 2rem 4rem 7rem;
-    justify-content: center;
+    justify-content: space-around;
     background-color: var(--text);
     color: var(--title);
-    text-align: center;
+    text-align: left;
     border-top: 3px solid var(--primary);
 }
 
 
 .footer a {
-    color: var(--accent-color);
+    color: var(--title);
     text-decoration: none;
     margin: 5px;
 }
 
 .footer a:hover {
-    color: var(--primary-color);
+    color: var(--primary);
     text-decoration: underline;
 }
 
 .footer .info-links, footer .credits, footer .social-buttons {
+    display: flex;
     margin-bottom: 20px;
+    flex-direction: column;
 }
 
 .footer p {
-    margin: 5px 0;
+    margin-left: 5px;
 }
 
 noscript {
@@ -239,5 +246,9 @@ noscript {
             padding: 1rem;
             justify-content: space-around;
         }
+    }
+
+    .icon {
+        font-size: 1.6rem;
     }
 }
