@@ -1,0 +1,243 @@
+:root {
+    --background: #f0f8ff;
+    --primary: #bc002d;
+    --accent: #ffc0cb;    
+    --text: #333333;
+    --title: #f6f4ff;    
+    --border: #ffe4e1;    
+  }
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    background: var(--primary);
+    color: var(--background);
+    padding: 1.1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & h1 {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+}
+
+.header h1 {
+    margin-left: 20px;
+}
+
+.header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.header nav ul li {
+    margin: 0 15px;
+}
+
+.header nav ul li a {
+    color: var(--title);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+main {
+    margin-top: 4rem;
+    padding: 3rem;
+}
+
+.title {
+    font-size: 1.2rem;
+    font-weight: 600;
+     align-items: center;
+    text-align: center;
+    margin-bottom: 2rem;
+
+    & p {
+        font-size: 1rem;
+    }
+}
+
+.cards {
+    display: flex;
+    gap: 2.4rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 100%;
+    border: 2px solid var(--border);
+    border-radius: 16px;
+    padding: 1rem;
+    text-align: left;
+    text-rendering: geometricPrecision;
+    background: var(--accent);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+
+    & h3 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        padding: 1rem;
+    }
+
+    & p {
+        padding: 0 1em 1em 1em;
+        font-weight: 500;
+    }
+    
+    & li {
+        font-weight: 500;
+    }
+}
+
+.card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.menu-mobile, .menu-toggle, #navigation {
+    display: none;
+}
+
+.footer {
+    display: flex;
+    width: 100%;
+    padding: 2rem 4rem 7rem;
+    justify-content: center;
+    background-color: var(--text);
+    color: var(--title);
+    text-align: center;
+    border-top: 3px solid var(--primary);
+}
+
+
+.footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+    margin: 5px;
+}
+
+.footer a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.footer .info-links, footer .credits, footer .social-buttons {
+    margin-bottom: 20px;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+noscript {
+    display: block;
+    position: fixed;
+    border: 2px solid var(--primary);
+    border-radius: 5px;
+    padding: 0.7em;
+    color: var(--primary);
+    font-size: 0.8em;
+    font-weight: 500;
+    max-width: 20vw;
+    background-color: var(--background);
+    top: 7rem;
+    left: 2px;
+}
+
+@media screen and (max-width: 768px) {
+    
+    .header {
+        display: none;
+    }
+    
+    .menu-mobile {
+        display: flex;
+        background: var(--primary);
+        padding: 15px;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+    
+    .menu-toggle {
+        background: none;
+        color: var(--title);
+        font-size: 24px;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .nav-mobile {
+        display: none;
+        background: var(--primary);
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+    }
+    
+    .nav-mobile ul {
+        list-style: none;
+        padding: 10px;
+    }
+    
+    .nav-mobile ul li {
+        margin: 10px 0;
+    }
+    
+    .nav-mobile ul li a {
+        color: var(--title);
+        text-decoration: none;
+        display: block;
+        padding: 10px;
+    }
+    
+    .nav-mobile.ativo {
+        display: block;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+    
+    main {
+        margin-top: 60px;
+    }
+    
+    .cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #navigation {
+        display: flex;
+        position: fixed;
+        width: 100%;
+        justify-content: center;
+        background-color: var(--primary);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9;
+        
+        & ul {
+            width: 100%;
+            display: flex;
+            padding: 1rem;
+            justify-content: space-around;
+        }
+    }
+}
